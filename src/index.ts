@@ -1,13 +1,12 @@
 import { Command } from "commander";
 
-import { helloWorld } from "@/commands/hello-world.js";
+import { deleteFns } from "@/commands/delete-fns.js";
 
 const program = new Command();
 
 program
-  .command("hello-world")
-  .description("Output a hello world message")
-  .requiredOption("-n, --name <string>", "Your name")
-  .action((args: { name: string }) => helloWorld(args));
+  .command("delete-fns")
+  .description("Delete orphaned Lambda@Edge functions in us-east-1")
+  .action(() => deleteFns());
 
 await program.parse();
