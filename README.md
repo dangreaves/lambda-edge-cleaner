@@ -1,6 +1,6 @@
 # 🧼 lambda-edge-cleaner
 
-> CLI tool for deleting orphaned [Lambda@Edge](https://aws.amazon.com/lambda/edge/) functions in the `us-east-1` region.
+> CLI tool for deleting orphaned [Lambda@Edge](https://aws.amazon.com/lambda/edge/) functions.
 
 ![GitHub License](https://img.shields.io/github/license/dangreaves/lambda-edge-cleaner)
 
