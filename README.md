@@ -22,6 +22,21 @@ This is because the stack can only be deleted when all the replicas have been de
 
 This means you end up with orphaned edge function stacks in your `us-east-1` region, which never get deleted, despite not being associated with any distributions.
 
+## Usage
+
+> [!CAUTION]
+> This script will delete CloudFormation stacks without warning.
+>
+> - Use of this script is at your own risk.
+> - You may need to adapt it for your specific use case.
+> - It has no CLI interface or fancy features to protect you.
+> - Carefully review the contents of [src/commands/delete-fns.ts](./src/commands/delete-fns.ts) before running this script.
+
+```sh
+npm install
+npm start -- delete-fns
+```
+
 ## How does it work?
 
 > [!WARNING]
@@ -39,18 +54,3 @@ The script works with the following steps.
 4. Fetches all CloudFormation stacks in the `us-east-1` region.
 5. For each unattached Lambda@Edge function ARN, try to find a matching CloudFormation stack (they share parts of the name).
 6. If a CloudFormation stack is found, delete it.
-
-# Usage
-
-> [!CAUTION]
-> This script will delete CloudFormation stacks without warning.
->
-> - Use of this script is at your own risk.
-> - You may need to adapt it for your specific use case.
-> - It has no CLI interface or fancy features to protect you.
-> - Carefully review the contents of [src/commands/delete-fns.ts](./src/commands/delete-fns.ts) before running this script.
-
-```sh
-npm install
-npm start -- delete-fns
-```
