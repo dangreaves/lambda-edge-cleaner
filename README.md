@@ -1,10 +1,10 @@
-# 🧼 lambda-edge-cleaner
-
-> CLI tool for deleting orphaned [Lambda@Edge](https://aws.amazon.com/lambda/edge/) functions.
+# CLI tool for deleting orphaned Lambda@Edge functions
 
 ![GitHub License](https://img.shields.io/github/license/dangreaves/lambda-edge-cleaner)
 
-## Why?
+This CLI tool uses the AWS SDK to delete [Lambda@Edge](https://aws.amazon.com/lambda/edge) functions in the `us-east-1` region which are no longer attached to a CloudFront distribution.
+
+## Motivation
 
 Lambda@Edge functions must be created in the `us-east-1` region.
 
