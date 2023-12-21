@@ -10,20 +10,20 @@
     "start": "tsx ./src/index.ts"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudformation": "^3.468.0",
-    "@aws-sdk/client-cloudfront": "^3.468.0",
-    "@aws-sdk/client-lambda": "^3.468.0",
+    "@aws-sdk/client-cloudformation": "^3.478.0",
+    "@aws-sdk/client-cloudfront": "^3.478.0",
+    "@aws-sdk/client-lambda": "^3.478.0",
     "commander": "^11.1.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
     "@tsconfig/strictest": "^2.0.2",
-    "@types/node": "^20",
+    "@types/node": "^20.10.5",
     "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
-    "prettier": "^3.0.3",
-    "tsx": "^4.0.0",
-    "typescript": "^5.2.2"
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
   },
   "lint-staged": {
     "*.{js,ts,css,md}": "prettier --write"
